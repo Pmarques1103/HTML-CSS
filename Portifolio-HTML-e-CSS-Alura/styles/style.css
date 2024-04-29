@@ -1,0 +1,138 @@
+:root /* :root eh uma variavel*/ {
+    --cor-primaria: #2C3639;
+    --cor-secundaria: #DCD7C9;
+    --cor-terciaria: #A27B5C;
+    --cor-hover: #3F4E4F;
+
+    --fonte-primaria: Krona One, sans-serif;
+    --fonte-secundaria:'Montserrat', sans-serif;
+}
+
+
+{
+    margin: 0;
+    padding: 0;
+}
+    
+body{
+   /* height: 100vh;  /*largura 100% da tela */
+    box-sizing: border-box;
+    background-color:var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 1% 0% 0% 10%;  
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 74px;
+
+}
+
+.cabecalho__menu__link{
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-size: 1,5rem;
+    font-weight: 600;
+    text-decoration: none;
+    }
+
+.titulo-destaque{
+    color: var(--cor-terciaria) /*para destacar uma parte do texto espefico dentro do texto todo*/
+}
+.apresentacao{
+    /*margin: 10% 15%;*/
+    padding: 0% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px ;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2,25rem; /* para mudar a medida pra rem divide o pix usando uma escala. 16px eh igual a 1rem. nessa caso dividimos 36 por 16 q da 2,25rem */
+    font-family: var(--fonte-primaria);
+}
+.apresentacao__conteudo__texto{
+    font-size: 1,5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1,5rem;
+}
+
+.apresentacao__links__navegacao {
+       /* background-color: pink; - caso vc queira pintar o fundo*/ 
+        border: 2px solid var(--cor-terciaria); /* borda: 2px eh a experssura da linha, solid eh que a linha eh solida, sem pontinhado e purple eh a cor da linha*/
+        width: 50%;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 1,5rem;
+        font-weight: 600;
+        /*peso da fonte, ou seja a font fica mais grossa*/
+        padding: 16px 0; 
+        /* 2 valores, o primeiro eg valor vertical e o segundo o valor horizontal */
+        text-decoration: none;
+        color: var(--cor-secundaria)
+        font-family: var(--fonte-secundaria)
+    }
+
+    .apresentacao__links__link:hover {
+        background-color: var(--cor-hover);
+    }
+    .apresentacao__imagem {
+        width: 50%
+    } 
+
+
+.rodape {
+    padding: 17px; 
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    border: 2px solid var(--cor-secundaria); 
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1,5rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+@media (max-width:1200px) {
+    
+    .cabecalho{
+        padding: 10%;  
+    }
+
+    .cabecalho__menu{
+       justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
